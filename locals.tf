@@ -1,13 +1,10 @@
 locals {
-    ami_id = var.ami_id
-    instance_type = var.instance_type
     common_tags = {
-        project= var.project
-        environment =  var.env
+        Project = "roboshop"
+        Environment = "dev"
+        terraform = "true"
     }
 
-    final_ec2_tags = merge(local.common_tags,var.ec2_tags)  
-    
-    
+    ec2_final_tags = merge(local.common_tags,var.ec2_tags)
 }
-
+    
