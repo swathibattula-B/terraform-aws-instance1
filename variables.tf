@@ -15,7 +15,7 @@ variable "instance_type" {
     
 }
 
-variable "sg_id" {
+variable "sg_ids" {
     type = list(string)
 }
 
