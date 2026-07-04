@@ -1,6 +1,6 @@
 resource "aws_instance_ "example" {
-    ami = 
-    instance_type =
-    vpc_security_group_ids = 
-    tags  =
+    ami = var.ami_id
+    instance_type = var.instance_type
+    vpc_security_group_ids = var.sg_ids
+    tags  = var.ec2_tags
 }
