@@ -6,15 +6,8 @@ locals {
         environment =  var.env
     }
 
-    final_ec2_tags = {
-        merge(local.common_tags,
-        {
-           Name = "${var.project}-${var.environment}"
-        },
-
-        var.ec2_tags
-        )  
-    }
+    final_ec2_tags = merge(local.common_tags,var.ec2_tags)  
+    
     
 }
 
